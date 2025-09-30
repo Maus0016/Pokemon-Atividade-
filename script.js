@@ -53,7 +53,7 @@ console.log("Achou")
         
         infos.stats.forEach((item)=>{
             const statuspoke = document.createElement("p")
-            statuspoke.innerText = item.base_stat
+            statuspoke.innerText = item.base_stat 
             divstats.append(statuspoke)
         })
         
