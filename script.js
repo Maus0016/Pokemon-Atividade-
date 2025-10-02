@@ -1,10 +1,18 @@
 async function getPokes() {
-console.log("Achou")
+
+
+    const typeClasses = {
+    grass: "Grama",
+    fire: "Fogo",
+    water: "Aguá",
+    bug: "Inseto",
+    normal: "Normal",
+    }
     
     const resposta = await fetch("https://pokeapi.co/api/v2/pokemon")
-    console.log(resposta, "pokes")
+    
     const pokemon = await resposta.json()
-    console.log(pokemon.results, "resultado")
+    
     const ul = document.querySelector("ul")
     pokemon.results.forEach(async(pokemon)=> {
         console.log(pokemon,"pokemon")
@@ -16,6 +24,14 @@ console.log("Achou")
         const resposta = await fetch(pokemon.url)
         const infos = await resposta.json()
         console.log(infos,"infos")
+
+        li.classList.add(typeClasses[infos.types[0].type.name])
+
+        li.addEventListener("click", ()=>{
+            localStorage.setItem("pokemon",JSON.stringify(infos))
+            location.href = "/pokemon"
+        })
+
         const img = document.createElement("img")
         img.src = infos.sprites.front_default
 
@@ -55,6 +71,7 @@ console.log("Achou")
             const statuspoke = document.createElement("p")
             statuspoke.innerText = item.base_stat 
             divstats.append(statuspoke)
+            
         })
         
 
