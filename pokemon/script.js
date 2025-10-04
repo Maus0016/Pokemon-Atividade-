@@ -16,26 +16,30 @@ function getPokes() {
         const li = document.createElement("li")
 
         const img = document.createElement("img")
+        img.alt = "oo"
         img.src = infos.sprites.front_default
-        const img1 = document.createElement("img1")
+        const img1 = document.createElement("img")
         img1.src = infos.sprites.front_shiny
-        const img2 = infos.document.createElement("img2")
-        img2.src = infos.sprites.back_default
+        //const img2 = document.createElement("img")
+        //img2.src = infos.sprites.back_default
+
+        const divimages = document.createElement("div")
+        divimages.append(img, img1 )
 
          const pesopoke = document.createElement("p")
         pesopoke.innerText = `Peso: ${infos.weight}`
 
         const alturapoke = document.createElement("p")
-        alturapoke.innerText = `Altura: " ${infos.height}`
+        alturapoke.innerText = `Altura:  ${infos.height}`
 
         const experienciepoke = document.createElement("p")
         experienciepoke.innerText = `Experiencia: ${infos.base_experience}`
 
         const numeracaopoke = document.createElement("p")
-        numeracaopoke.innerText = `Pedido: " ${infos.order}`
+        numeracaopoke.innerText = `Ordem:  ${infos.order}`
 
         const ordempoke = document.createElement("p")
-        ordempoke.innerText = `Numeração: " ${infos.id}`
+        ordempoke.innerText = `Pokemon # ${infos.id}`
 
           const titleType = document.createElement("p")
         titleType.innerText = "Tipos: "
@@ -49,14 +53,16 @@ function getPokes() {
             divTypes.append(tipopoke)
         })
         const titulostats = document.createElement("p")
+        titulostats.classList.add("titulo-stats")
         titulostats.innerText = "Status: " 
         const divstats = document.createElement("div")
 
         divstats.append(titulostats)
-        
+        divstats.classList.add("stats")
         infos.stats.forEach((item)=>{
             const statuspoke = document.createElement("p")
-            statuspoke.innerText = item.base_stat 
+            statuspoke.innerText = item.stat.name +": "+ item.base_stat 
+
             divstats.append(statuspoke)
             
         })
@@ -64,7 +70,7 @@ function getPokes() {
 
         const main = document.querySelector("main")
         
-        main.append(img,img1,img2,Nomepoke,pesopoke,alturapoke,numeracaopoke,ordempoke, divTypes,divstats)
+        main.append(divimages,Nomepoke,pesopoke,alturapoke,numeracaopoke,ordempoke, divTypes,divstats)
         main.classList.add(typeTipos[infos.types[0].type.name])
 
 }

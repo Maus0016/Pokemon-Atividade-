@@ -1,50 +1,87 @@
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+    font-size: xx-large;
+    text-align: center;
+    image-resolution: 30px;
+    border:24px  black;
+    
+
+
+}
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: url("https://i.pinimg.com/originals/e1/cd/5b/e1cd5b1146bf8cb2149ff0161f7f5793.jpg");
 }
 main {
     display: flex;
-    gap: 24px;
+    gap: 4px;
     padding: 24px;
     flex-wrap: wrap;
-
-     border: 1px solid;
-    border-radius: 12px;
     align-items: center;
+    border: 1px solid;
+    border-radius: 12px;
+    align-items: auto;
     flex-direction: column;
+    width: max-content;
 
 }
 
+.stats {
 
+
+width: max-content;
+margin: 0 auto;
+}
+.stats p {
+    text-align: left;
+}
+.titulo-stats{
+    text-align: center;
+    
+}
    
 .Grama {
     color: #ffffff;
     background-color: #078e07;
     border: 1px solid #065048;
-    box-shadow: 0px 0px 6px rgb(81, 97, 81);
+    box-shadow: 2px 0px 60px rgb(71 101 71);
 }
 .Fogo {
     color: #ffffff;
       background-color: #8e2907;
     border: 1px solid #d35004;
-    box-shadow: 0px 0px 6px #615251;
+    box-shadow: 2px 0px 60px rgb(71 101 71);
 }
 .Aguá {
     color: #ffffff;
     background-color: rgb(20, 20, 167);
     border: 1px solid rgb(3, 3, 56);
-    box-shadow: 0px 0px 6px darkcyan
+    box-shadow: 2px 0px 60px rgb(71 101 71);
 }
 .Inseto{
      color: #ffffff;
     background-color: rgb(11, 51, 28);
     border: 1px solid rgb(3, 56, 10);
-    box-shadow: 0px 0px 6px darkcyan
+    box-shadow: 2px 0px 60px rgb(71 101 71);
 }
 .Normal{
     background-color: aqua;
     border: #615251;
-    box-shadow: #065048;
+    box-shadow: 2px 0px 60px #065048;
+}
+div img {
+    transition: all 0.8s ease;
+    cursor: pointer;
+    width: 200px;
+}
+div img:hover{
+    transform: scale(2);
 }

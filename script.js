@@ -32,54 +32,54 @@ async function getPokes() {
             location.href = "/pokemon"
         })
 
-        const img = document.createElement("img")
-        img.src = infos.sprites.front_default
+         const img = document.createElement("img")
+         img.src = infos.sprites.front_default
 
-        const pesopoke = document.createElement("p")
-        pesopoke.innerText = "Peso: " + infos.weight
+        // const pesopoke = document.createElement("p")
+        // pesopoke.innerText = "Peso: " + infos.weight
 
-        const alturapoke = document.createElement("p")
-        alturapoke.innerText = "Altura: " + infos.height
+        // const alturapoke = document.createElement("p")
+        // alturapoke.innerText = "Altura: " + infos.height
 
-        const experienciepoke = document.createElement("p")
-        experienciepoke.innerText = "Experiencia: " + infos.base_experience
+        // const experienciepoke = document.createElement("p")
+        // experienciepoke.innerText = "Experiencia: " + infos.base_experience
 
-        const numeracaopoke = document.createElement("p")
-        numeracaopoke.innerText = "Pedido: " + infos.order
+        // const numeracaopoke = document.createElement("p")
+        // numeracaopoke.innerText = "Pedido: " + infos.order
 
-        const ordempoke = document.createElement("p")
-        ordempoke.innerText = "Numeração: " + infos.id
+        // const ordempoke = document.createElement("p")
+        // ordempoke.innerText = "Numeração: " + infos.id
 
-        const titleType = document.createElement("p")
-        titleType.innerText = "Tipos: "
-        const divTypes = document.createElement("div")
+        // const titleType = document.createElement("p")
+        // titleType.innerText = "Tipos: "
+        // const divTypes = document.createElement("div")
 
-        divTypes.append(titleType)
+        // divTypes.append(titleType)
 
-        infos.types.forEach((item)=>{
-            const tipopoke = document.createElement("p")
-            tipopoke.innerText =  item.type.name
-            divTypes.append(tipopoke)
-        })
-        const titulostats = document.createElement("p")
-        titulostats.innerText = "Status: " 
-        const divstats = document.createElement("div")
+        // infos.types.forEach((item)=>{
+        //     const tipopoke = document.createElement("p")
+        //     tipopoke.innerText =  item.type.name
+        //     divTypes.append(tipopoke)
+        // })
+        // const titulostats = document.createElement("p")
+        // titulostats.innerText = "Status: " 
+        // const divstats = document.createElement("div")
 
-        divstats.append(titulostats)
+        // divstats.append(titulostats)
         
-        infos.stats.forEach((item)=>{
-            const statuspoke = document.createElement("p")
-            statuspoke.innerText = item.base_stat 
-            divstats.append(statuspoke)
+        // infos.stats.forEach((item)=>{
+        //     const statuspoke = document.createElement("p")
+        //     statuspoke.innerText = item.base_stat 
+        //     divstats.append(statuspoke)
             
-        })
+        // })
         
 
 
 
-
+        //pesopoke,alturapoke,experienciepoke,numeracaopoke,ordempoke,divTypes, divstats
         
-        li.append(img,p,pesopoke,alturapoke,experienciepoke,numeracaopoke,ordempoke,divTypes, divstats)
+        li.append(img,p)
         
 
         ul.append(li)
